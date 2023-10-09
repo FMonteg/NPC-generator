@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NPC Generator (for Mistborn Adventure Game)</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='npc_sheet_style.css') }}">
+    
+</head>
+<body>
+    <div class="character-sheet">
+        <h1>Non playing character (MAG)</h1>
+        
+
+        <div class="section">
+            <h1>{{ character.name }}</h1>
+            <div class="traits">
+                <p><span class="attribute">Appearance:</span> {{ character.appearance }}</p>
+                <p><span class="attribute">Backstory:</span> {{ character.backstory }}</p>
+                <p><span class="attribute">Personality:</span> {{ character.personality }}</p>
+                <p><span class="attribute">Virtue:</span> {{ character.virtue }}</p>
+                <p><span class="attribute">Vice:</span> {{ character.vice }}</p>
+                <p><span class="attribute">Powers:</span> {{ character.powers }}</p>
+            </div>
+        </div>
+
+
+        <button class="refresh-button" type="button" onclick="refreshCharacter()">New Character</button>
+
+    </div>
+
+    <script>
+        function refreshCharacter() {
+            location.reload(); // Reload the page
+        }
+    </script>
+</body>
+</html>
