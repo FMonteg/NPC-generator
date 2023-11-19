@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Générateur de PNJ (cadre de campagne Héros & Dragons)</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='pnj_sheet_style.css') }}">
+    
+</head>
+<body>
+    <div class="character-sheet">
+        <h1>Personnage Non Joueur (H&D)</h1>
+        
+
+        <div class="section">
+            <h1>Traits caractéristiques</h1>
+            <div class="traits">
+                <p><span class="attribute">Force :</span> {{ character.force }}</p>
+                <p><span class="attribute">Faiblesse :</span> {{ character.faiblesse }}</p>
+                <p><span class="attribute">Manie :</span> {{ character.manie }}</p>
+                <p><span class="attribute">Signe distinctif :</span> {{ character.signe }}</p>
+                <p><span class="attribute">Caractère :</span> {{ character.caractere }}</p>
+                <p><span class="attribute">Talent/Qualité :</span> {{ character.qualite }}</p>
+                <p><span class="attribute">Idéal (alignement) :</span> {{ character.ideal }}</p>
+                <p><span class="attribute">Lien :</span> {{ character.lien }}</p>
+            </div>
+        </div>
+
+
+        <button class="refresh-button" type="button" onclick="refreshCharacter()">Nouveau PNJ</button>
+
+    </div>
+
+    <script>
+        function refreshCharacter() {
+            location.reload(); // Reload the page
+        }
+    </script>
+</body>
+</html>
